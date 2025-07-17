@@ -3,7 +3,7 @@
 This repository contains two independent yet complementary pipelines:
 
 1. **force_predict/** – Predict 3-D force vectors from binary images.  
-2. **ProPainter/** – Perform video-level object removal / inpainting using masks derived from the force-prediction stage.
+2. **Inpainting/** – Perform video-level object removal / inpainting using masks derived from the force-prediction stage.
 ## System Requirements
 | Component   | Exact Specification                                          |
 | ----------- | ------------------------------------------------------------ |
