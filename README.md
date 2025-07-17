@@ -17,7 +17,7 @@ This repository contains two independent yet complementary pipelines:
 ## Tested Package Stack
 | Environment                      | Key Versions                                                                                                                    |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **ProPainter** (ProPainter)  | `torch==2.4.1+cu121`, `torchvision==0.19.1+cu121`, `opencv==4.10.0.84`, `numpy==1.24.4`                                         |
+| **Inpainting** (Inpainting)  | `torch==2.4.1+cu121`, `torchvision==0.19.1+cu121`, `opencv==4.10.0.84`, `numpy==1.24.4`                                         |
 | **Force-Predict** (force_predict) | `torch==2.7.1+cu121`, `torchvision==0.22.1+cu121`, `pandas==1.5.3`, `scikit-learn==1.3.0`, `opencv==4.10.0.84`, `numpy==1.24.3` |
 
 
@@ -33,8 +33,8 @@ nr/
 │       ├── init.py
 │       ├── CustomDataset.py
 │       └── model.py
-├── ProPainter/
-│   ├── inference_propainter.py
+├── Inpainting/
+│   ├── inference_inpainting.py
 
 
 ---
@@ -42,32 +42,32 @@ nr/
 ## 🚀 Quick Start
 
 ### 1. Environment-force_predict
-ubuntu：
+ubutu：
 cd force_predict
 conda env create -f environment.yml
 
-### 2. Environment-ProPainter
-ubuntu：
-cd ProPainter
-conda create -n ProPainter python=3.8
+### 2. Environment-Inpainting
+ubutu：
+cd Inpainting
+conda create -n Inpainting python=3.8
 pip install -r requirements.txt
 ### 3. Force Prediction
 python main.py    # Outputs per-image predictions & ground-truth
 ### 4. Video Inpainting
-python inference_propainter.py --video inputs/prodata --mask inputs/mask  # Results appear in ProPainter/results/.
+python inference_Inpainting.py --video inputs/prodata --mask inputs/mask  # Results appear in Inpainting/results/.
 ##📊 Data Format
 | File                           | Description                               |
 | ------------------------------ | ----------------------------------------- |
 | `data/data.csv`                | `image_path,x,y,z`                        |
 | `data/binarydata/*.jpg`        | Binary images with 9 black dots           |
-| `data/prodata/*.jpg`           | Identical images used as ProPainter input |
-| `ProPainter/inputs/mask/*.jpg` | Masks generated from binary images        |
+| `data/prodata/*.jpg`           | Identical images used as Inpainting input |
+| `Inpainting/inputs/mask/*.jpg` | Masks generated from binary images        |
 ## Typical Install Time
 | Step                   | Time        |
 | ---------------------- | ----------- |
 | Environment creation   | 34 s        |
 | Force_predict environment | 160 s        |
-| ProPainter requirements | 52 s        |
+| Inpainting requirements | 52 s        |
 | **Total**              | **≈ 4 min** |
 
 ## Demo Run Time
