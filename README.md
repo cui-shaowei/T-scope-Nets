@@ -36,7 +36,7 @@ nr/
 ├── Inpainting/
 │   ├── inference_inpainting.py
 
-
+The /Inpainting/weights/ProPainter.pth can be downloaded from https://drive.google.com/file/d/1QqQM-jm5ZHk5_Shk4SatZmQJyFyqePSh/view?usp=drive_link
 ---
 
 ## 🚀 Quick Start
